@@ -1,0 +1,962 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/qw3rtman/gg"
+
+    >gitgoodies (v1.0.1)</a>
+</h1>
+<h4>Shortcuts for the Git Commands You Use Everyday.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gitgoodies">module gitgoodies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.addAll">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>addAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.addOptions">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>addOptions
+            <span class="apidocSignatureSpan">(options, target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.addSingle">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>addSingle
+            <span class="apidocSignatureSpan">(target)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.branch">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>branch
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.checkout">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>checkout
+            <span class="apidocSignatureSpan">(branch)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.clone">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>clone
+            <span class="apidocSignatureSpan">(repository)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.cloneGitHub">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>cloneGitHub
+            <span class="apidocSignatureSpan">(repository)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.commit">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>commit
+            <span class="apidocSignatureSpan">(message, addAll)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.fetch">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>fetch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.fetchAll">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>fetchAll
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.ignore">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>ignore
+            <span class="apidocSignatureSpan">(template)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.init">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>init
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.log">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>log
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.pull">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>pull
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.push">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>push
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.repoCheck">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>repoCheck
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.status">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>status
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.upToDate">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>upToDate
+            <span class="apidocSignatureSpan">(reportOnTrue, reportOnFalse)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gitgoodies.version">
+            function <span class="apidocSignatureSpan">gitgoodies.</span>version
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gitgoodies" id="apidoc.module.gitgoodies">module gitgoodies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.addAll" id="apidoc.element.gitgoodies.addAll">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>addAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addAll = function () {
+  exec(&#x27;git add -A&#x27;);
+
+  console.log(success(&#x27;[✔] Added everything!&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.addOptions" id="apidoc.element.gitgoodies.addOptions">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>addOptions
+        <span class="apidocSignatureSpan">(options, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addOptions = function (options, target) {
+  // TODO: Fix the Error Handling! Currently just ignores warnings
+  exec(&#x27;git add -&#x27; + options + &#x27; &#x27; + target, function(error, stdout, stderr) {
+    if (typeof target === &#x27;undefined&#x27;) {// Then just add all.
+      exports.addAll();
+    } else {
+      if (stderr.substring(0, 5) === &#x27;fatal&#x27;) {
+        console.log(whoops(&#x27;[✖] Could not add target specified. &#x27;) + chalk.red(&#x27;Are you sure the target exists?&#x27;));
+      } else {
+        console.log(success(&#x27;[✔] Added &#x27; + target + &#x27;!&#x27;));
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.addSingle" id="apidoc.element.gitgoodies.addSingle">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>addSingle
+        <span class="apidocSignatureSpan">(target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addSingle = function (target) {
+  // TODO: Fix the Error handling! Currently just ignores warnings
+  exec(&#x27;git add &#x27; + target, function(error, stdout, stderr) {
+    if (typeof target === &#x27;undefined&#x27;) {// Then just add all.
+      exports.addAll();
+    } else {
+      if (stderr.substring(0, 5) === &#x27;fatal&#x27;) {
+        console.log(whoops(&#x27;[✖] Could not add target specified. &#x27;) + chalk.red(&#x27;Are you sure the target exists?&#x27;));
+      } else {
+        console.log(success(&#x27;[✔] Added &#x27; + target + &#x27;!&#x27;));
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.branch" id="apidoc.element.gitgoodies.branch">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>branch
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">branch = function (name) {
+  if (name === &#x27;&#x27; || typeof name === &#x27;undefined&#x27;) { // List branches.
+    exec(&#x27;git branch&#x27;, function(error, stdout, stderr) {
+      if (stdout === &#x27;&#x27;) {
+        console.log(notice(&#x27;[~] No branches exist.&#x27;));
+      }
+
+      var branches = stdout.split(&#x27;\n&#x27;);
+      for (var i = 0; i &#x3c; branches.length - 1; i++) {
+        if (branches[i].substring(0, 1) === &#x27;*&#x27;) { // Current branch.
+          console.log(&#x27;|- &#x27; + success.bold(branches[i].substring(2)));
+        } else {
+          console.log(chalk.dim(&#x27;|- &#x27; + branches[i].substring(2)));
+        }
+      }
+    });
+  } else { // Create branch and checkout.
+    exec(&#x27;git branch &#x27; + name, function(error, stdout, stderr) {
+      if (stderr.split(&#x27; &#x27;)[0] === &#x27;fatal:&#x27;) {
+        if (stderr.substring(0, 21) === &#x27;fatal: A branch named&#x27;) { // Branch already exists.
+          console.log(notice(&#x27;[~] Branch \&#x27;&#x27; + name + &#x27;\&#x27; already exists.&#x27;));
+
+          // Checkout branch.
+          exports.checkout(name);
+        } else if (stderr.slice(-24) === &#x27;not a valid branch name.&#x27;) { // Invalid branch name.
+          console.log(notice(&#x27;[~] \&#x27;&#x27; + name + &#x27;\&#x27; is an invalid branch name.&#x27;));
+        } else if (stderr.substring(7, 30) === &#x27;Not a valid object name&#x27;) { // No branches exist.
+          console.log(notice(&#x27;[~] No branches exist.&#x27;));
+        } else { // Generic error.
+          console.log(whoops(&#x27;[✖] Could not create new branch \&#x27;&#x27; + name + &#x27;\&#x27;.&#x27;));
+        }
+      } else {
+        console.log(success(&#x27;[✔] Created new branch \&#x27;&#x27; + name + &#x27;\&#x27;!&#x27;));
+
+        // Switch to new branch.
+        exports.checkout(name);
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.checkout" id="apidoc.element.gitgoodies.checkout">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>checkout
+        <span class="apidocSignatureSpan">(branch)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">checkout = function (branch) {
+  if (branch === &#x27;&#x27; || typeof branch === &#x27;undefined&#x27;) { // If no branch provided, list the branches.
+    exports.branch();
+  } else {
+    exec(&#x27;git checkout &#x27; + branch, function(error, stdout, stderr) {
+      switch (stderr.split(&#x27; &#x27;)[0]) {
+        case &#x27;Already&#x27;:
+          console.log(notice(&#x27;[~] Already on branch \&#x27;&#x27; + branch + &#x27;\&#x27;.&#x27;));
+          break;
+
+        case &#x27;Switched&#x27;:
+          console.log(success(&#x27;[✔] Switched to branch \&#x27;&#x27; + branch + &#x27;\&#x27;!&#x27;));
+          break;
+
+        case &#x27;error:&#x27;: // Branch does not exist.
+          console.log(notice(&#x27;[~] Branch \&#x27;&#x27; + branch + &#x27;\&#x27; doesn\&#x27;t exist.&#x27;));
+          console.log();
+
+          exports.branch(branch);
+          break;
+
+        case &#x27;fatal&#x27;:
+          console.log(notice(&#x27;[~] No branches exist.&#x27;));
+          break;
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.clone" id="apidoc.element.gitgoodies.clone">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>clone
+        <span class="apidocSignatureSpan">(repository)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">clone = function (repository) {
+  // Nothing to clone.
+  if (repository === &#x27;&#x27; || typeof repository === &#x27;undefined&#x27;) {
+    console.log(notice(&#x27;[~] You must enter a repository URL or GitHub project (username/repository).&#x27;));
+  } else {
+    exec(&#x27;git clone &#x27; + repository, function(error, stdout, stderr) {
+      if (stderr.substring(0, 7) === &#x27;Cloning&#x27;) {
+        if (stderr.split(&#x27;\n&#x27;)[1].split(&#x27; &#x27;)[0] === &#x27;fatal:&#x27;) {
+          console.log(whoops(&#x27;[✖] Could not clone repository.&#x27;));
+        } else {
+          console.log(success(&#x27;[✔] Cloned into &#x27; + stderr.split(&#x27;\n&#x27;)[0].split(&#x27; &#x27;)[2]));
+        }
+      } else {
+        if (stderr.substring(0, 23) === &#x27;fatal: destination path&#x27;) {
+          console.log(notice(&#x27;[~] Directory &#x27; + stderr.split(&#x27; &#x27;)[3] + &#x27; is not empty.&#x27;));
+        } else {
+          console.log(whoops(&#x27;[✖] Could not clone repository.&#x27;));
+        }
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.cloneGitHub" id="apidoc.element.gitgoodies.cloneGitHub">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>cloneGitHub
+        <span class="apidocSignatureSpan">(repository)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cloneGitHub = function (repository) {
+  if (repository === &#x27;&#x27; || typeof repository === &#x27;undefined&#x27;) {
+    exports.clone(repository);
+  } else {
+    exports.clone(&#x27;https://github.com/&#x27; + repository + &#x27;.git&#x27;);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.commit" id="apidoc.element.gitgoodies.commit">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>commit
+        <span class="apidocSignatureSpan">(message, addAll)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function (message, addAll) {
+  // No commit message.
+  if (message === &#x27;&#x27; || typeof message === &#x27;undefined&#x27;) {
+    console.log(notice(&#x27;[~] You must enter a commit message.&#x27;));
+  } else {
+    if (addAll) {
+      exports.addAll();
+    }
+
+    exec(&#x27;git commit -m &#x22;&#x27; + message + &#x27;&#x22;&#x27;, function(error, stdout, stderr) {
+      if (stdout.substring(0, 1) === &#x27;[&#x27;) {
+        console.log(success(&#x27;[✔] Committed!&#x27;));
+
+        console.log();
+        console.log(&#x27;&#x22;&#x27; + underline(message) + &#x27;&#x22;&#x27;);
+      } else if (stdout.substring(0, 2) === &#x27;On&#x27;) {
+        console.log(notice(&#x27;[~] Everything already committed.&#x27;));
+      } else {
+        console.log(whoops(&#x27;[✖] Could not commit changes.&#x27;) + chalk.red(&#x27; Try again if there was a large amount of changes to add
+.&#x27;));
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.fetch" id="apidoc.element.gitgoodies.fetch">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>fetch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetch = function () {
+  exec(&#x27;git fetch&#x27;, function(error, stdout, stderr) {
+    if (stdout === &#x27;&#x27; &#x26;&#x26; stderr === &#x27;&#x27;) {
+      console.log(success(&#x27;[✔] Fetched!&#x27;));
+    } else {
+      console.log(whoops(&#x27;[✖] Could not fetch commits.&#x27;));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.fetchAll" id="apidoc.element.gitgoodies.fetchAll">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>fetchAll
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fetchAll = function () {
+  exec(&#x27;git fetch --all&#x27;, function(error, stdout, stderr) {
+    if (stderr === &#x27;&#x27;) {
+      console.log(success(&#x27;[✔] Fetched all!&#x27;));
+    } else {
+      console.log(whoops(&#x27;[✖] Could not fetch commits.&#x27;));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.ignore" id="apidoc.element.gitgoodies.ignore">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>ignore
+        <span class="apidocSignatureSpan">(template)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ignore = function (template) {
+  var request = require(&#x27;request&#x27;);
+  var fs = require(&#x27;fs&#x27;);
+
+  if (template === &#x27;&#x27; || typeof template === &#x27;undefined&#x27;) {
+    request(&#x27;https://www.gitignore.io/api/list&#x27;, function(error, response, body) {
+      console.log(&#x27;|- &#x27; + body.replace(new RegExp(&#x27;,&#x27;.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, &#x27;\\$1&#x27;), &#x27;g&#x27;), &#x27;\n|- &#x27;));
+
+      console.log(notice(&#x27;[~] You must enter one of the templates or languages listed above.&#x27;));
+    });
+  } else {
+    request(&#x27;https://www.gitignore.io/api/&#x27; + template, function(error, response, body) {
+      if (body.split(&#x27;\n&#x27;)[2].substring(0, 10) === &#x27;#!! ERROR:&#x27;) { // Template doesn&#x27;t exist.
+        request(&#x27;https://www.gitignore.io/api/list&#x27;, function(error, response, body) {
+          console.log(&#x27;|- &#x27; + body.replace(new RegExp(&#x27;,&#x27;.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, &#x27;\\$1&#x27;), &#x27;g&#x27;), &#x27;\n|- &#x27;));
+
+          console.log(whoops(&#x27;[✖] Template &#x27; + template + &#x27; does not exist. &#x27;));
+          console.log(notice(&#x27;[~] You must enter one of the templates or languages listed above.&#x27;));
+        });
+      } else { // Does exist!
+        fs.appendFile(&#x27;.gitignore&#x27;, body, function(err) {
+          if (err) {
+            console.log(whoops(&#x27;[✖] Could not create .gitignore for &#x27; + template + &#x27;.&#x27;));
+          } else {
+            console.log(success(&#x27;[✔] Created .gitignore for &#x27; + template + &#x27;!&#x27;));
+          }
+        });
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.init" id="apidoc.element.gitgoodies.init">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>init
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">init = function () {
+  exec(&#x27;git init&#x27;, function(error, stdout, stderr) {
+    if (stdout.substring(0, 13) === &#x27;Reinitialized&#x27;) {
+      console.log(notice(&#x27;[~] Reinitialized existing Git repository.&#x27;));
+    } else {
+      console.log(success(&#x27;[✔] Initialized new Git repository.&#x27;));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.log" id="apidoc.element.gitgoodies.log">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>log
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">log = function (file) {
+  var fileName = &#x27;&#x27;;
+  var fs = require(&#x27;fs&#x27;);
+  var logCommand;
+
+  if (typeof file !== &#x27;undefined&#x27; &#x26;&#x26; file !== &#x27;&#x27;) {
+    // Testing if the file exists
+    try {
+      // Trying to open the file
+      fs.openSync(file, &#x27;r&#x27;);
+    } catch (ENOENT) {
+      // If the file does not exist, we tell the user.
+      console.log(whoops(&#x27;[✖] File &#x27; + file + &#x27; does not exist. &#x27;));
+      return;
+    } finally {
+      // We might have other read/write permission errors, etc.
+      // But this is not what we are looking for
+      // So ending here is good to continue, and we can process the git command
+      fileName = &#x27; &#x27; + file;
+    }
+  }
+
+  if (isWindows) {
+    exec(&#x27;git log --pretty=format:{^|commit^|:^|%H^|,%n^|author^|:^|%an:%ae^|,%n^|date^|:^|%ad^|,%n^|message^|:^|%f^|},&#x27; + fileName
+, function(error, stdout, stderr) {
+      stdout = &#x27;[&#x27; + stdout.replace(/\|/g, &#x27;&#x22;&#x27;).slice(0, -1) + &#x27;]&#x27;;
+
+      if (stdout === &#x27;[]\n&#x27;) { // No commits, so empty array is returned.
+        console.log(notice(&#x27;[~] No commits... yet! Commit with the \&#x27;gg c\&#x27; command.&#x27;));
+      }
+
+      var log = JSON.parse(stdout);
+      log.reverse(); // Show newest at the bottom.
+
+      for (var i = 0; i &#x3c; log.length; i++) {
+        console.log(); // New line between each commit.
+
+        console.log(notice(&#x27;[&#x27; + log[i].commit + &#x27;]&#x27;));
+
+        var author = {
+          name: log[i].author.split(&#x27;:&#x27;)[0].trim(),
+          email: &#x27;&#x3c;&#x27; + log[i].author.split(&#x27;:&#x27;)[1] + &#x27;&#x3e;&#x27;
+        };
+
+        console.log(&#x27;|- &#x27; + chalk.gray(author.name) + &#x27; &#x27; + chalk.gray.dim(author.email));
+        console.log(&#x27;|- &#x27; + chalk.gray.dim(log[i].date));
+        console.log(&#x27;|- &#x27; + chalk.green(log[i].message.split(&#x27;-&#x27;).join(&#x27; &#x27;)));
+      }
+    });
+  } else {
+    // https://gist.github.com/textarcana/1306223
+    exec(&#x27;git log --pretty=format:\&#x27;{%n  &#x22;commit&#x22;: &#x22;%H&#x22;,%n  &#x22;author&#x22;: &#x22;%an &#x3c;%ae&#x3e;&#x22;,%n  &#x22;date&#x22;: &#x22;%ad&#x22;,%n  &#x22;message&#x22;: &#x22;%f&#x22;%n},\&#x27;&#x27; +
+fileName + &#x27; $@ | perl -pe\&#x27;BEGIN{print &#x22;[&#x22;}; END{print &#x22;]\n&#x22;}\&#x27; | perl -pe \&#x27;s/},]/}]/\&#x27;&#x27;, function(error, stdout, stderr) {
+      if (stdout === &#x27;[]\n&#x27;) { // No commits, so empty array is returned.
+        console.log(notice(&#x27;[~] No commits... yet! Commit with the \&#x27;gg c\&#x27; command.&#x27;));
+      }
+
+      var log = JSON.parse(stdout);
+      log.reverse(); // Show newest at the bottom.
+
+      for (var i = 0; i &#x3c; log.length; i++) {
+        console.log(); // New line between each commit.
+
+        console.log(notice(&#x27;[&#x27; + log[i].commit + &#x27;]&#x27;));
+
+        var author = {
+          name: log[i].author.split(&#x27;&#x3c;&#x27;)[0].trim(),
+          email: &#x27;&#x3c;&#x27; + log[i].author.split(&#x27;&#x3c;&#x27;)[1]
+        };
+
+        console.log(&#x27;|- &#x27; + chalk.gray(author.name) + &#x27; &#x27; + chalk.gray.dim(author.email));
+        console.log(&#x27;|- &#x27; + chalk.gray.dim(log[i].date));
+        console.log(&#x27;|- &#x27; + chalk.green(log[i].message.split(&#x27;-&#x27;).join(&#x27; &#x27;)));
+      }
+    });
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.pull" id="apidoc.element.gitgoodies.pull">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>pull
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pull = function () {
+  exec(&#x27;git pull&#x27;, function(error, stdout, stderr) {
+    if (stdout.substring(0, 7) === &#x27;Already&#x27;) {
+      console.log(notice(&#x27;[~] Everything is already up-to-date.&#x27;));
+    } else if (stdout.substring(0, 8) === &#x27;Updating&#x27;) {
+      if (stdout.split(&#x27;\n&#x27;)[1] === &#x27;error: Your local changes to the following files would be overwritten by merge:&#x27;) {
+        console.log(whoops(&#x27;[✖] Could not pull commits.&#x27;) + chalk.red(&#x27; (may have to pull using the &#x27;) + chalk.red.underline(&#x27;standard
+ git command&#x27;) + chalk.red(&#x27; to handle merge conflicts.)&#x27;));
+      } else {
+        console.log(success(&#x27;[✔] Pulled!&#x27;));
+      }
+    } else {
+      // TODO: add handling for merge conflicts.
+      console.log(whoops(&#x27;[✖] Could not pull commits.&#x27;) + chalk.red(&#x27; (may have to pull using the &#x27;) + chalk.red.underline(&#x27;standard
+ git command&#x27;) + chalk.red(&#x27; to handle merge conflicts.)&#x27;));
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.push" id="apidoc.element.gitgoodies.push">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>push
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">push = function () {
+  exec(&#x27;git push&#x27;, function(error, stdout, stderr) {
+    if (stderr.split(&#x27;\n&#x27;)[0] === &#x27;Everything up-to-date&#x27;) {
+      console.log(notice(&#x27;[~] All commits already pushed.&#x27;));
+    } else {
+      if (stderr.split(&#x27;\n&#x27;)[1].split(&#x27; &#x27;)[0] === &#x27;fatal:&#x27;) {
+        if (stderr.split(&#x27;\n&#x27;)[1].substring(0, 23) === &#x27;fatal: unable to access&#x27;) {
+          console.log(whoops(&#x27;[✖] Unable to access remote repository due to insufficient permissions.&#x27;));
+        } else {
+          console.log(whoops(&#x27;[✖] Could not push commits.&#x27;));
+        }
+      } else if (stderr.split(&#x27;\n&#x27;)[0].split(&#x27; &#x27;)[0] === &#x27;To&#x27;) {
+        if (stderr.split(&#x27;\n&#x27;)[1].split(&#x27; &#x27;)[1] === &#x27;!&#x27;) { // Need to pull first.
+          // TODO: add handling for non-fast-forwards (when you need to pull first, merge, and then push).
+          console.log(notice(&#x27;[~] Push rejected! Pull changes from remote first.&#x27;));
+        } else {
+          console.log(success(&#x27;[✔] Pushed!&#x27;));
+        }
+      } else if (stderr.split(&#x27;\n&#x27;)[0].substring(0, 30) === &#x27;warning: push.default is unset&#x27;) {
+        if (stderr.split(&#x27;\n&#x27;)[21] === &#x27;Everything up-to-date&#x27;) {
+          console.log(notice(&#x27;[~] All commits already pushed.&#x27;));
+        } else {
+          if (stderr.split(&#x27;\n&#x27;)[22].split(&#x27; &#x27;)[0] === &#x27;fatal:&#x27;) {
+            if (stderr.split(&#x27;\n&#x27;)[22].substring(0, 23) === &#x27;fatal: unable to access&#x27;) {
+              console.log(whoops(&#x27;[✖] Unable to access remote repository due to insufficient permissions.&#x27;));
+            } else {
+              console.log(whoops(&#x27;[✖] Could not push commits.&#x27;));
+            }
+          } else if (stderr.split(&#x27;\n&#x27;)[21].split(&#x27; &#x27;)[0] === &#x27;To&#x27;) {
+            if (stderr.split(&#x27;\n&#x27;)[22].split(&#x27; &#x27;)[1] === &#x27;!&#x27;) { // Need to pull first.
+              // TODO: add handling for non-fast-forwards (when you need to pull first, merge, and then push).
+              console.log(notice(&#x27;[~] Push rejected! Pull changes from remote first.&#x27;));
+            } else {
+              console.log(success(&#x27;[✔] Pushed!&#x27;));
+            }
+          } else { // Generic error.
+            console.log(whoops(&#x27;[✖] Could not push commits.&#x27;));
+          }
+        }
+      } else { // Generic error.
+        console.log(whoops(&#x27;[✖] Could not push commits.&#x27;));
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.repoCheck" id="apidoc.element.gitgoodies.repoCheck">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>repoCheck
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">repoCheck = function (callback) {
+  exec(&#x27;git rev-parse&#x27;, function(error, stdout, stderr) {
+    if (stderr.length === 0) {
+      return callback();
+    }
+    console.log(whoops(&#x27;[✖] Not in a valid git repository! Run &#x22;gg i&#x22; to initialise one.&#x27;));
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.status" id="apidoc.element.gitgoodies.status">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>status
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">status = function () {
+  exec(&#x27;git status&#x27;, function(error, stdout, stderr) {
+    var status = stdout.split(&#x27;\n&#x27;);
+
+    // Branch.
+    var branch;
+    if (status[0].split(&#x27; &#x27;)[0] === &#x27;HEAD&#x27;) { // If HEAD is at a commit.
+      branch = chalk.dim(&#x27;branch  &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(status[0].split(&#x27; &#x27;)[3]);
+    } else {
+      branch = chalk.dim(&#x27;branch  &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(status[0].split(&#x27; &#x27;)[2]);
+    }
+
+    console.log(branch);
+
+    // Position in branch.
+    var position;
+    switch (status[1].split(&#x27; &#x27;)[3]) {
+      case &#x27;behind&#x27;:
+        position = &#x27;position&#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(status[1].split(&#x27; &#x27;)[7] + &#x27; commits behind (fetch or pull)&#x27;);
+        break;
+
+      case &#x27;for&#x27;: // Quick hack to get it working when changes are not staged.
+      case &#x27;working&#x27;: // Quick hack to get it working with freshly initialized git repositories.
+      case &#x27;up-to-date&#x27;:
+        position = chalk.dim(&#x27;position&#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;up-to-date&#x27;);
+        break;
+
+      case &#x27;ahead&#x27;:
+        position = &#x27;position&#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(status[1].split(&#x27; &#x27;)[7] + &#x27; commits ahead (push commits)&#x27;);
+        break;
+
+      default:
+        // TODO: add proper handling for freshly initialized git repositories.
+        if (typeof status[1].split(&#x27; &#x27;)[3] === &#x27;undefined&#x27;) { // Quick hack to get it working with freshly initialized git repositories
+.
+          position = chalk.dim(&#x27;position&#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;up-to-date&#x27;);
+        } else if (status[1] === &#x27;Changes to be committed:&#x27;) {
+          position = chalk.dim(&#x27;position&#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;up-to-date&#x27;);
+        } else {
+          position = &#x27;position&#x27; + chalk.gray.dim(&#x27; | &#x27;) + whoops(&#x27;diverged&#x27;);
+        }
+    }
+    console.log(position);
+
+    console.log();
+
+    // Staging.
+    var staging;
+    if (status[2] === &#x27;Initial commit&#x27;) { // Fresh repository.
+      switch (status[4]) {
+        case &#x27;Untracked files:&#x27;:
+          staging = &#x27;staging &#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(&#x27;not all changes staged (add all changes)&#x27;);
+          break;
+
+        case &#x27;Changes to be committed:&#x27;:
+        case &#x27;nothing to commit (create/copy files and use &#x22;git add&#x22; to track)&#x27;:
+          staging = chalk.dim(&#x27;staging &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;all changes staged&#x27;);
+          break;
+      }
+    } else if (status[1].substring(0, 14) === &#x27;Your branch is&#x27;) { // There&#x27;s a remote origin.
+      if (status[2] === &#x27;  (use &#x22;git pull&#x22; to update your local branch)&#x27; || status[2] === &#x27;  (use &#x22;git push&#x22; to publish your local
+ commits)&#x27;) {
+        switch (status[4]) {
+          case &#x27;Changes not staged for commit:&#x27;:
+          case &#x27;Untracked files:&#x27;:
+            staging = &#x27;staging &#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(&#x27;not all changes staged (add all changes)&#x27;);
+            break;
+
+          case &#x27;Changes to be committed:&#x27;:
+          case &#x27;nothing to commit, working directory clean&#x27;:
+            staging = chalk.dim(&#x27;staging &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;all changes staged&#x27;);
+            break;
+        }
+      } else {
+        if (status[2] === &#x27;&#x27;) {
+          switch (status[3]) {
+            case &#x27;Changes not staged for commit:&#x27;:
+            case &#x27;Untracked files:&#x27;:
+              staging = &#x27;staging &#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(&#x27;not all changes staged (add all changes)&#x27;);
+              break;
+
+            case &#x27;Changes to be committed:&#x27;:
+            case &#x27;nothing to commit, working directory clean&#x27;:
+              staging = chalk.dim(&#x27;staging &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;all changes staged&#x27;);
+              break;
+          }
+        } else {
+          switch (status[2]) {
+            case &#x27;Changes not staged for commit:&#x27;:
+            case &#x27;Untracked files:&#x27;:
+              staging = &#x27;staging &#x27; + chalk.gray.dim(&#x27; | &#x27;) + notice(&#x27;not all changes staged (add all changes)&#x27;);
+              break;
+
+            case &#x27;Changes to be committed:&#x27;:
+            case &#x27;nothing to commit, working directory clean&#x27;:
+              staging = chalk.dim(&#x27;staging &#x27;) + chalk.gray.dim(&#x27; | &#x27;) + success(&#x27;all changes staged&#x27;);
+              break; ...</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.upToDate" id="apidoc.element.gitgoodies.upToDate">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>upToDate
+        <span class="apidocSignatureSpan">(reportOnTrue, reportOnFalse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upToDate = function (reportOnTrue, reportOnFalse) {
+  var package = require(&#x27;../package.json&#x27;);
+  var currentVersion = package.version;
+
+  var latestVersion = require(&#x27;latest-version&#x27;);
+  latestVersion(&#x27;gitgoodies&#x27;, function(err, version) {
+    if (version !== currentVersion) { // Not up to date.
+      if (reportOnFalse) {
+        console.log();
+        console.log(notice(&#x27;[~] This version of gg is not up-to-date.&#x27;) + &#x27; &#x27; + chalk.yellow(&#x27;Update with &#x27; + chalk.bold(&#x27;npm update
+ -g gitgoodies&#x27;) + &#x27;.&#x27;));
+      }
+    } else {
+      if (reportOnTrue) {
+        console.log();
+        console.log(success(&#x27;[✔] This version of gg is up-to-date.&#x27;));
+      }
+    }
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gitgoodies.version" id="apidoc.element.gitgoodies.version">
+        function <span class="apidocSignatureSpan">gitgoodies.</span>version
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">version = function () {
+  var package = require(&#x27;../package.json&#x27;);
+  var version = package.version;
+
+  console.log(success(&#x27;gg&#x27;) + &#x27; version &#x27; + notice(version));
+
+  exports.upToDate(true, false);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
