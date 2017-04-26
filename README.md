@@ -1,6 +1,6 @@
 # npmdoc-gitgoodies
 
-#### api documentation for  [gitgoodies (v1.0.1)](https://github.com/qw3rtman/gg)  [![npm package](https://img.shields.io/npm/v/npmdoc-gitgoodies.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gitgoodies) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gitgoodies.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gitgoodies)
+#### basic api documentation for  [gitgoodies (v1.0.1)](https://github.com/qw3rtman/gg)  [![npm package](https://img.shields.io/npm/v/npmdoc-gitgoodies.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gitgoodies) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gitgoodies.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gitgoodies)
 
 #### Shortcuts for the Git Commands You Use Everyday.
 
