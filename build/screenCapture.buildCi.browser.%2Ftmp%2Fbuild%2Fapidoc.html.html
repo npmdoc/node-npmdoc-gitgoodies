@@ -245,7 +245,23 @@
 
   console.log(success('[âœ”] Added everything!'));
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      var target = cli.args[0];
+      gg.addSingle(target);
+    }
+    break;
+
+  // Add all.
+  case 'aa': // Short for 'add all'.
+    gg.<span class="apidocCodeKeywordSpan">addAll</span>();
+    break;
+
+  // Commit.
+  case 'c':
+  case 'ci':
+  case 'commit':
+    var message = cli.args.join(' ');
+...</pre></li>
     </ul>
 
 
@@ -271,7 +287,23 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // Add.
+  case 'a':
+  case 'add':
+    if (cli.args[1] === '' || typeof cli.args[1] !== 'undefined') {
+      var options = cli.args[0];
+      var target = cli.args[1];
+      gg.<span class="apidocCodeKeywordSpan">addOptions</span>(options, target);
+    } else {
+      var target = cli.args[0];
+      gg.addSingle(target);
+    }
+    break;
+
+  // Add all.
+...</pre></li>
     </ul>
 
 
@@ -297,7 +329,23 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  case 'add':
+    if (cli.args[1] === '' || typeof cli.args[1] !== 'undefined') {
+      var options = cli.args[0];
+      var target = cli.args[1];
+      gg.addOptions(options, target);
+    } else {
+      var target = cli.args[0];
+      gg.<span class="apidocCodeKeywordSpan">addSingle</span>(target);
+    }
+    break;
+
+  // Add all.
+  case 'aa': // Short for 'add all'.
+    gg.addAll();
+    break;
+...</pre></li>
     </ul>
 
 
@@ -349,7 +397,23 @@
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    gg.log(file);
+    break;
+
+  // Branch.
+  case 'b':
+  case 'branch':
+    var branch = cli.args.join('-');
+    gg.<span class="apidocCodeKeywordSpan">branch</span>(branch);
+    break;
+
+  // Checkout.
+  case 'ch':
+  case 'checkout':
+    var branch = cli.args.join('-');
+    gg.checkout(branch);
+...</pre></li>
     </ul>
 
 
@@ -389,7 +453,21 @@
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      gg.branch(branch);
+      break;
+
+    // Checkout.
+    case 'ch':
+    case 'checkout':
+      var branch = cli.args.join('-');
+      gg.<span class="apidocCodeKeywordSpan">checkout</span>(branch);
+      break;
+  }
+}
+
+gg.upToDate(false, true);
+...</pre></li>
     </ul>
 
 
@@ -423,7 +501,22 @@
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var repository = cli.args[0];
+
+    if (typeof repository === 'undefined') {
+      repository = '';
+    }
+
+    if (repository.substring(0, 7) === 'http://' || repository.substring(0, 8) === 'https://') { // URL.
+      gg.<span class="apidocCodeKeywordSpan">clone</span>(repository);
+    } else if (repository.indexOf('@') &gt; -1 &amp;&amp; repository.indexOf(':') &gt; -1) { // SSH.
+      gg.clone(repository);
+    } else {
+      gg.cloneGitHub(repository);
+    }
+    break;
+...</pre></li>
     </ul>
 
 
@@ -442,7 +535,23 @@
     exports.clone('https://github.com/' + repository + '.git');
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    }
+
+    if (repository.substring(0, 7) === 'http://' || repository.substring(0, 8) === 'https://') { // URL.
+      gg.clone(repository);
+    } else if (repository.indexOf('@') &gt; -1 &amp;&amp; repository.indexOf(':') &gt; -1) { // SSH.
+      gg.clone(repository);
+    } else {
+      gg.<span class="apidocCodeKeywordSpan">cloneGitHub</span>(repository);
+    }
+    break;
+
+  // Add.
+  case 'a':
+  case 'add':
+    if (cli.args[1] === '' || typeof cli.args[1] !== 'undefined') {
+...</pre></li>
     </ul>
 
 
@@ -478,7 +587,23 @@
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    break;
+
+  // Commit.
+  case 'c':
+  case 'ci':
+  case 'commit':
+    var message = cli.args.join(' ');
+    gg.<span class="apidocCodeKeywordSpan">commit</span>(message, true);
+    break;
+
+  // Commit without adding.
+  case 'cn':
+    var message = cli.args.join(' ');
+    gg.commit(message, false);
+    break;
+...</pre></li>
     </ul>
 
 
@@ -499,7 +624,22 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  case 'pull':
+    gg.pull();
+    break;
+
+  // Fetch.
+  case 'f':
+  case 'fetch':
+    gg.<span class="apidocCodeKeywordSpan">fetch</span>();
+    break;
+
+  // Fetch all.
+  case 'fa': // Short for 'fetch --all'.
+    gg.fetchAll();
+    break;
+...</pre></li>
     </ul>
 
 
@@ -520,7 +660,23 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  case 'f':
+  case 'fetch':
+    gg.fetch();
+    break;
+
+  // Fetch all.
+  case 'fa': // Short for 'fetch --all'.
+    gg.<span class="apidocCodeKeywordSpan">fetchAll</span>();
+    break;
+
+  // Status.
+  case 's':
+  case 'st':
+  case 'status':
+    gg.status();
+...</pre></li>
     </ul>
 
 
@@ -563,7 +719,22 @@
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    break;
+
+  // .gitignores.
+  case 'ig':
+  case 'ignore':
+    var template = cli.args.join('-');
+
+    gg.<span class="apidocCodeKeywordSpan">ignore</span>(template);
+    break;
+
+  // Clone.
+  case 'cl':
+  case 'clone':
+    var repository = cli.args[0];
+...</pre></li>
     </ul>
 
 
@@ -584,7 +755,22 @@
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    gg.version();
+    break;
+
+  // Initialize.
+  case 'i':
+  case 'init':
+  case 'initialize':
+    gg.<span class="apidocCodeKeywordSpan">init</span>();
+    break;
+
+  // .gitignores.
+  case 'ig':
+  case 'ignore':
+    var template = cli.args.join('-');
+...</pre></li>
     </ul>
 
 
@@ -673,7 +859,23 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
     });
   }
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    gg.status();
+    break;
+
+  // Log.
+  case 'l':
+  case 'log':
+    var file = cli.args.join(' ');
+    gg.<span class="apidocCodeKeywordSpan">log</span>(file);
+    break;
+
+  // Branch.
+  case 'b':
+  case 'branch':
+    var branch = cli.args.join('-');
+    gg.branch(branch);
+...</pre></li>
     </ul>
 
 
@@ -703,7 +905,23 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  case 'push':
+    gg.push();
+    break;
+
+  // Pull.
+  case 'pl':
+  case 'pull':
+    gg.<span class="apidocCodeKeywordSpan">pull</span>();
+    break;
+
+  // Fetch.
+  case 'f':
+  case 'fetch':
+    gg.fetch();
+    break;
+...</pre></li>
     </ul>
 
 
@@ -760,7 +978,23 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    var message = cli.args.join(' ');
+    gg.commit(message, false);
+    break;
+
+  // Push.
+  case 'p':
+  case 'push':
+    gg.<span class="apidocCodeKeywordSpan">push</span>();
+    break;
+
+  // Pull.
+  case 'pl':
+  case 'pull':
+    gg.pull();
+    break;
+...</pre></li>
     </ul>
 
 
@@ -780,7 +1014,27 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
     console.log(whoops('[âœ–] Not in a valid git repository! Run "gg i" to initialise one.'));
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+process.bin = process.title = 'gg';
+
+var gg = require('../lib/gg.js');
+var cli = require('cli');
+
+cli.parse(null, ['v', 'version', '-v', '--version', 'i', 'init', '
+;initialize', 'ig', 'ignore', 'cl', 'clone', 'a', 'aa', 'add
+', 'c', 'ci', 'commit', 'cn', 'commitnoadd', 'p', 'push'
+;, 'pl', 'pull', 'f', 'fetch', 'fa', 's', 'status', '
+l', 'log', 'b', 'branch', 'ch', 'checkout']);
+
+gg.<span class="apidocCodeKeywordSpan">repoCheck</span>(parseCommand);
+function parseCommand() {
+switch (cli.command) {
+  // Version.
+  case 'v':
+  case 'version':
+  case '-v':
+  case '--version':
+...</pre></li>
     </ul>
 
 
@@ -889,7 +1143,23 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
             case 'nothing to commit, working directory clean':
               staging = chalk.dim('staging ') + chalk.gray.dim(' | ') + success('all changes staged');
               break; ...</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    gg.fetchAll();
+    break;
+
+  // Status.
+  case 's':
+  case 'st':
+  case 'status':
+    gg.<span class="apidocCodeKeywordSpan">status</span>();
+    break;
+
+  // Log.
+  case 'l':
+  case 'log':
+    var file = cli.args.join(' ');
+    gg.log(file);
+...</pre></li>
     </ul>
 
 
@@ -921,7 +1191,16 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
     }
   });
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    case 'checkout':
+      var branch = cli.args.join('-');
+      gg.checkout(branch);
+      break;
+  }
+}
+
+gg.<span class="apidocCodeKeywordSpan">upToDate</span>(false, true);
+...</pre></li>
     </ul>
 
 
@@ -941,7 +1220,23 @@ fileName + ' $@ | perl -pe\'BEGIN{print "["}; END{print "]\n"}\' | perl -pe \'s/
 
   exports.upToDate(true, false);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function parseCommand() {
+switch (cli.command) {
+  // Version.
+  case 'v':
+  case 'version':
+  case '-v':
+  case '--version':
+    gg.<span class="apidocCodeKeywordSpan">version</span>();
+    break;
+
+  // Initialize.
+  case 'i':
+  case 'init':
+  case 'initialize':
+    gg.init();
+...</pre></li>
     </ul>
 
 
